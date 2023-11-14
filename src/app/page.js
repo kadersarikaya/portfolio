@@ -4,6 +4,7 @@ import {MdOutlineAlternateEmail} from "react-icons/md"
 import {SlSocialLinkedin, SlSocialYoutube, SlSocialGithub} from "react-icons/sl"
 import {BsMedium} from "react-icons/bs"
 import "../../src/styles/global.css"
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -26,26 +27,37 @@ export default function Home() {
               <li className="pb-2" >I am a classic Virgo woman who loves to organize and plan everything in my life. </li>
             </ul>
             <ul className="flex gap-4 justify-start pt-8">
+              <Link href="mailto:kadersarikaya0123@gmail.com">  
               <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
                 w-50 h-50 p-3 text-xl text-white">
-                <MdOutlineAlternateEmail/>
+                  <MdOutlineAlternateEmail/>
               </li>
-              <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
+              </Link>  
+              <Link target="_blank" href="https://www.linkedin.com/in/kadersarikaya/">
+                <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
                 w-50 h-50 p-3 text-xl text-white">
                   <SlSocialLinkedin/>
                 </li>
-              <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
-                w-50 h-50 p-3 text-xl text-white">
-                <SlSocialGithub/>
-              </li>
-              <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
-                w-50 h-50 p-3 text-xl text-white">
-                <BsMedium/>
-              </li>
-              <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
-                w-50 h-50 p-3 text-xl text-white">
-                  <SlSocialYoutube/>
-              </li> 
+              </Link>
+              <Link target="_blank"
+                  href="https://github.com/kadersarikaya" >
+                <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
+                  w-50 h-50 p-3 text-xl text-white">
+                    <SlSocialGithub/>
+                </li>
+              </Link>
+              <Link target="_blank" href="https://medium.com/@kadersarikaya">
+                <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
+                  w-50 h-50 p-3 text-xl text-white">
+                  <BsMedium/>
+                </li>
+              </Link>
+              <Link target="_blank" href="https://www.youtube.com/channel/UCx1N7sOSIVrboWStYKN0nWw">
+                <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
+                  w-50 h-50 p-3 text-xl text-white">
+                    <SlSocialYoutube/>
+                </li> 
+              </Link>
             </ul>
         </article>
       </section>
