@@ -3,12 +3,7 @@ import React, {useState} from "react";
 import Image from "next/image";
 import { motion } from "framer-motion"
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
-
-const projectsData = [
-  // Projelerinizi içeren veri nesnelerini burada tanımlayın
-  { id: 1, title: "Proje 1", description: "Proje 1 açıklama", imageUrl: "resim_url" },
-  { id: 2, title: "Proje 2", description: "Proje 2 açıklama", imageUrl: "resim_url" },
-];
+import { projectsData } from "@/data/project/data";
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -22,7 +17,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto px-4 pb-5 flex flex-col justify-center items-center">
+    <section className="max-w-4xl mx-auto py-6 px-4 lg:px-0">
       <h1 className="text-2xl pb-10 text-center">Projects</h1>
       <div className="relative w-full">
         <motion.div 
@@ -33,32 +28,36 @@ const Projects = () => {
         className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500  
         rounded-lg p-4 flex-col lg:flex-row lg:flex lg:justify-between"
         >
-          <div className="font-serif opacity-10 text-9xl items-end flex pb-6">1</div>
+          <div className="font-serif opacity-10 text-9xl items-end flex pb-6">{projectsData[currentProject].id}</div>
           <div className="flex flex-col gap-3 p-2 justify-between">
             <h2 className="text-xl">{projectsData[currentProject].title}</h2>
             <p className="md:w-[95%]">{projectsData[currentProject].description}</p>
             <div className="flex flex-col items-center">
-              <div className="flex font-semibold">
-                <div className="p-2">CSS
-                </div>
-                <div className="p-2">Nextjs
-                </div>
-                <div className="p-2">Reactjs
-                </div>
-                <div className="p-2">Nodejs
-                </div>
-                <div className="p-2">Express
-                </div>
-                <div className="p-2">oAuth
-                </div>
+              <div className="flex flex-wrap justify-start gap-2 font-semibold">
+                {projectsData[currentProject].tags.map((tag) => (
+                  <div className="bg-indigo-600 px-2 py-1 rounded-lg mr-2
+                   md:mr-4 text-sm md:text-base
+                  " key={tag}>
+                    {tag}
+                  </div>
+                ))}
               </div>
               <div className="flex gap-4 pt-4">
-                <a className="bg-indigo-600 hover:bg-indigo-700 px-4 py-1 rounded-lg" href="font-semibold">Website</a>
-                <a className="bg-indigo-600 hover:bg-indigo-700 px-4 py-1 rounded-lg" href="font-semibold">Github</a>
+                <a href={projectsData[currentProject].webLink} className="
+                 bg-none hover:bg-indigo-300 border border-indigo-600  
+                px-4 py-1 rounded-lg"  >
+                  Website
+                </a>
+                <a href={projectsData[currentProject].gitLink} 
+                  className="bg-none hover:bg-indigo-300 border border-indigo-600 
+                   px-4 py-1 rounded-lg" >
+                  Github
+                </a>
               </div>
             </div>
           </div>
-          <img className="rounded-md w-full pt-2 md:pt-0" src="https://via.placeholder.com/350" alt="Project Image" />
+          <Image className="hidden md:block rounded-lg shadow-lg max-w-[300px] max-h-[300px] object-cover 
+          " src={projectsData[currentProject].imageUrl} alt="Project Image" />
         </motion.div>
         <button
           onClick={prevProject}

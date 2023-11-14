@@ -1,7 +1,9 @@
+"use client"
 import Image from 'next/image'
 import {MdOutlineAlternateEmail} from "react-icons/md"
 import {SlSocialLinkedin, SlSocialYoutube, SlSocialGithub} from "react-icons/sl"
 import {BsMedium} from "react-icons/bs"
+import "../../src/styles/global.css"
 
 export default function Home() {
   return (
@@ -11,7 +13,7 @@ export default function Home() {
             <div class="bg-gradient-to-r pb-4 text-transparent from-blue-400 via-green-500 to-purple-500 bg-clip-text text-2xl font-bold">
               Software Engineer 
             </div>
-            <ul className="text-gray-600 md:w-[75%] dark:text-gray-400 text-xl">
+            <ul className="text-gray-600 md:w-[75%] dark:text-gray-400 text-lg">
               <li className="pb-2" >I'm a fresh graduate software engineer who is passionate about creating
               stunning projects and into in computer science.
               </li>
@@ -43,11 +45,7 @@ export default function Home() {
               <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
                 w-50 h-50 p-3 text-xl text-white">
                   <SlSocialYoutube/>
-              </li>
-              <li className="rounded-full bg-gray-600 hover:bg-purple-400 transition-all
-                w-50 h-50 p-3 text-xl text-white">
-                  <MdOutlineAlternateEmail/>
-              </li>
+              </li> 
             </ul>
         </article>
       </section>
