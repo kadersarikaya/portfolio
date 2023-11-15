@@ -67,7 +67,7 @@ It is now open source! My bootcamp peers contribute.
     description: `Cards of Dragon is a blockchain-based game. 
     I developed its landing page as a freelancer. 
     `,
-    imageUrl: block,
+    imageUrl: cod,
     tags: ["React", "Typescript", "Framer motion", "Web3"],
     gitLink:"https://github.com/kadersarikaya/cards-of-dragon",
     webLink:"https://cardsofdragon.netlify.app/",
@@ -80,6 +80,7 @@ It is now open source! My bootcamp peers contribute.
     Çkurova Blockchain Club is a university club that aims to raise awareness of 
     blockchain technology and cryptocurrencies. 
     `,
+    imageUrl: block,
     tags: ["Nextjs", "Sanity", "Tailwindcss", "Typscript "],
     gitLink: "https://github.com/cukurovablock/cukurova-block-website",
     webLink: "https://www.cukurovablock.com/"
