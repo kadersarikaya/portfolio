@@ -4,7 +4,7 @@ import food from  "../../assets/project/food.png"
 import movie from "../../assets/project/movie.jpg"
 import rest from  "../../assets/project/rest.jpg"
 import solana from "../../assets/project/solana.png"
-
+import block from "../../assets/project/block.png"
 export const projectsData = [
   // Projelerinizi içeren veri nesnelerini burada tanımlayın
    {
@@ -67,9 +67,21 @@ It is now open source! My bootcamp peers contribute.
     description: `Cards of Dragon is a blockchain-based game. 
     I developed its landing page as a freelancer. 
     `,
-    imageUrl: cod,
+    imageUrl: block,
     tags: ["React", "Typescript", "Framer motion", "Web3"],
     gitLink:"https://github.com/kadersarikaya/cards-of-dragon",
     webLink:"https://cardsofdragon.netlify.app/",
+  }, 
+  {
+    id: 7,
+    title: "University Club Website",
+    description: `I developed a website for the university club that I am a member of.
+    I used content management system (CMS) Sanity.io.
+    Çkurova Blockchain Club is a university club that aims to raise awareness of 
+    blockchain technology and cryptocurrencies. 
+    `,
+    tags: ["Nextjs", "Sanity", "Tailwindcss", "Typscript "],
+    gitLink: "https://github.com/cukurovablock/cukurova-block-website",
+    webLink: "https://www.cukurovablock.com/"
   }
 ];
