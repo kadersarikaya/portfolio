@@ -43,12 +43,12 @@ const Projects = () => {
                 ))}
               </div>
               <div className="flex gap-4 pt-4">
-                <a href={projectsData[currentProject].webLink} className="
+                <a target="_blank" href={projectsData[currentProject].webLink} className="
                  bg-none hover:bg-indigo-300 border border-indigo-600  
                 px-4 py-1 rounded-lg"  >
                   Website
                 </a>
-                <a href={projectsData[currentProject].gitLink} 
+                <a target="_blank" href={projectsData[currentProject].gitLink} 
                   className="bg-none hover:bg-indigo-300 border border-indigo-600 
                    px-4 py-1 rounded-lg" >
                   Github
