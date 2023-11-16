@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-      <section className="max-w-4xl mx-auto px-4 pb-5">
+      <section className="max-w-4xl mx-auto px-4 py-6">
         <article className="flex flex-col justify-center items-center" >
           <h2 className="text-2xl pb-2 font-semibold text-gray-800 dark:text-white"> Hi👋🏼 I'm Kader</h2>
             <div class="bg-gradient-to-r pb-4 text-transparent from-blue-400 via-green-500 to-purple-500 bg-clip-text text-2xl font-bold">

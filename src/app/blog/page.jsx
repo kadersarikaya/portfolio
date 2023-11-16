@@ -25,7 +25,7 @@ const Blog = () => {
     // ...
 
 return (
-  <section className="mx-auto max-w-4xl px-4 pb-5 justify-center flex flex-col items-start md:items-center">
+  <section className="mx-auto max-w-4xl px-4 py-6 justify-center flex flex-col items-start md:items-center">
     <h1 className="text-2xl pb-14">Blog & Notes</h1>
 
     <div className="flex flex-col gap-8">

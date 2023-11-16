@@ -6,7 +6,7 @@ import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 
 const BlogPost = ({ post }) => {
   return (
-    <div className="mx-auto max-w-4xl px-4 pb-5 justify-center flex flex-col items-start">
+    <div className="mx-auto max-w-4xl px-4 py-6 justify-center flex flex-col items-center">
       <div className="max-w-2xl w-full">
         <h1 className="text-3xl font-bold mb-4">{post.fields.title}</h1>
         <p className="text-gray-500 mb-2">{post.fields.postTag}</p>
